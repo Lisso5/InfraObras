@@ -1,0 +1,253 @@
+/* ============================================
+   ESTILOS ESPECÍFICOS PARA PÁGINA NOSOTROS
+   ============================================ */
+
+/* Sección Historia */
+.history-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco);
+}
+
+.history-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.history-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-gris);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.history-text strong {
+    color: var(--color-naranja);
+    font-weight: 600;
+}
+
+/* Sección Pilares (Misión, Visión, Objetivos, Valores) */
+.pillars-section {
+    padding: var(--espaciado-xl) 0;
+    background: linear-gradient(135deg, var(--color-gris-claro) 0%, var(--color-negro) 100%);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: var(--espaciado-lg);
+}
+
+.pillar-card--wide {
+    grid-column: 1 / -1; /* ocupa las dos columnas */
+}
+
+/* Tarjetas de pilares */
+.pillar-card {
+    background-color: var(--color-blanco);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: var(--transicion);
+    text-align: center;
+}
+
+.pillar-card:hover,
+.pillar-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 140, 0, 0.15);
+}
+
+/* Icono de pilar */
+/*.pillar-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza));
+    border-radius: 50%;
+    color: var(--color-blanco);
+    transition: var(--transicion);
+}
+
+.pillar-card:hover .pillar-icon {
+    transform: scale(1.1);
+} */
+
+/* Título del pilar */
+.pillar-title {
+    font-size: 1.75rem;
+    color: var(--color-negro);
+    margin-bottom: 1rem;
+}
+
+/* Texto del pilar */
+.pillar-text {
+    color: var(--color-gris);
+    line-height: 1.7;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* Lista de pilares */
+.pillar-list {
+    list-style: none;
+    text-align: left;
+    color: var(--color-gris);
+    line-height: 1.8;
+}
+
+.pillar-list li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.pillar-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-naranja);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Sección Brochure */
+.brochure-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco);
+}
+
+.brochure-container {
+    max-width: 800px;
+    margin: var(--espaciado-lg) auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Vista previa del brochure */
+.brochure-preview {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transicion);
+}
+
+.brochure-preview:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.brochure-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.brochure-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 1.5rem;
+    color: var(--color-blanco);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Acciones del brochure */
+.brochure-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transicion);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza));
+    color: var(--color-blanco);
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(255, 140, 0, 0.5);
+}
+
+.btn-secondary {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    border: 2px solid var(--color-naranja);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   MEDIA QUERIES
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .brochure-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pillar-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .history-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .pillar-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .pillar-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,803 @@
+/* ============================================
+   VARIABLES CSS - Colores y configuración global
+   ============================================ */
+:root {
+    --color-naranja: #FF8C00;
+    --color-negro: #1a1a1a;
+    --color-gris: #6c757d;
+    --color-gris-claro: #f8f9fa;
+    --color-blanco: #ffffff;
+    --color-mostaza: #DAA520;
+    
+    --fuente-principal: 'Roboto', Arial, sans-serif;
+    --fuente-titulos: 'Montserrat', Georgia, serif;
+    
+    --espaciado-sm: 0.5rem;
+    --espaciado-md: 1rem;
+    --espaciado-lg: 2rem;
+    --espaciado-xl: 4rem;
+    
+    --transicion: all 0.3s ease;
+}
+
+/* ============================================
+   RESET Y ESTILOS BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    line-height: 1.6;
+    color: var(--color-negro);
+    background-color: var(--color-blanco);
+    overflow-x: hidden;
+}
+
+/* Mejora de accesibilidad para elementos enfocados con teclado */
+*:focus {
+    outline: 3px solid var(--color-naranja);
+    outline-offset: 2px;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--espaciado-md);
+    color: var(--color-negro);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+p {
+    margin-bottom: var(--espaciado-md);
+    font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+a {
+    color: var(--color-naranja);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-mostaza);
+}
+
+/* ============================================
+   CONTENEDORES Y LAYOUT
+   ============================================ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-md);
+}
+
+/* ============================================
+   HEADER Y NAVEGACIÓN
+   ============================================ */
+.header {
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0.5rem 2.5%; /* Reducido de 1rem a 0.5rem */
+}
+
+.navbar {
+    padding: 0.5rem 0; /* Reducido de 1rem a 0.5rem */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Logo y nombre de empresa */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Reducido de 1rem a 0.75rem */
+}
+
+.logo-img {
+    height: 30px; /* Reducido de 50px a 40px */
+    width: auto;
+    object-fit: contain;
+}
+
+.company-name {
+    font-family: var(--fuente-titulos);
+    font-size: 1.25rem; /* Reducido de 1.5rem a 1.25rem */
+    font-weight: 700;
+    color: var(--color-negro);
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem; /* Reducido de 2rem a 1.5rem */
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-negro);
+    font-weight: 500;
+    padding: 0.4rem 0.8rem; /* Reducido de 0.5rem 1rem */
+    border-radius: 5px;
+    transition: var(--transicion);
+    position: relative;
+    font-size: 0.95rem; /* Añadido para texto más pequeño */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--color-naranja);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: var(--color-naranja);
+}
+
+/* Botón hamburguesa para móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem; /* Reducido de 0.5rem */
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-negro);
+    margin: 3px 0;
+    transition: var(--transicion);
+}
+
+/* ============================================
+   HERO BANNERS (Banners superiores de páginas)
+   ============================================ */
+.page-hero {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem; /* Reducido de 6rem porque el header es más delgado */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 26, 26, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    color: var(--color-blanco);
+    text-align: center;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   CARRUSEL DE IMÁGENES
+   ============================================ */
+.carousel-section {
+    margin-top: 5rem; /* Reducido de 8rem */
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item:hover .carousel-img {
+    transform: scale(1.05);
+}
+
+/* Controles del carrusel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-blanco);
+    border: none;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: var(--transicion);
+    z-index: 10;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    background-color: var(--color-naranja);
+}
+
+.carousel-control.prev {
+    left: 2rem;
+}
+
+.carousel-control.next {
+    right: 2rem;
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--color-blanco);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.indicator.active,
+.indicator:hover,
+.indicator:focus {
+    background-color: var(--color-naranja);
+}
+
+/* ============================================
+   SECCIÓN ESLOGAN
+   ============================================ */
+.slogan-section {
+    padding: var(--espaciado-xl) 0;
+    background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza));
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+.slogan {
+    margin-bottom: var(--espaciado-md);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slogan-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+
+/* ============================================
+   SECCIÓN DE CLIENTES (LOGOS ESTÁTICOS)
+   ============================================ */
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--espaciado-lg);
+    color: var(--color-negro);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: var(--color-naranja);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.clients-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco);
+}
+
+.clients-slider {
+    margin-top: var(--espaciado-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem; /* Agregar padding lateral */
+}
+
+.clients-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 800px; /* Limitar ancho máximo */
+    flex-wrap: wrap; /* Permitir que se envuelvan si es necesario */
+}
+
+.client-logo {
+    height: 100px;
+    width: auto;
+    max-width: 280px; /* Limitar ancho máximo del logo */
+    object-fit: contain;
+    flex-shrink: 1; /* Permitir que se reduzcan */
+    transition: transform 0.4s ease;
+}
+
+.client-logo:hover,
+.client-logo:focus {
+    transform: scale(1.1);
+}
+
+/* Tablets medianas (992px y menor) */
+@media (max-width: 992px) {
+    .clients-track {
+        gap: 3rem;
+    }
+    
+    .client-logo {
+        height: 90px;
+        max-width: 250px;
+    }
+}
+
+/* Tablets (768px y menor) */
+@media (max-width: 768px) {
+    .clients-track {
+        gap: 2.5rem;
+    }
+    
+    .client-logo {
+        height: 70px;
+        max-width: 200px;
+    }
+}
+
+/* Móviles grandes (576px y menor) */
+@media (max-width: 576px) {
+    .clients-track {
+        gap: 2rem;
+        flex-direction: column; /* Apilar verticalmente */
+    }
+    
+    .client-logo {
+        height: 60px;
+        max-width: 180px;
+    }
+    
+    .client-logo:hover {
+        transform: scale(1.05); /* Menos zoom en móvil */
+    }
+}
+
+/* Móviles pequeños (400px y menor) */
+@media (max-width: 400px) {
+    .clients-section {
+        padding: var(--espaciado-lg) 0;
+    }
+    
+    .clients-track {
+        gap: 1.5rem;
+    }
+    
+    .client-logo {
+        height: 50px;
+        max-width: 150px;
+    }
+}
+
+/* ============================================
+   PIE DE PÁGINA
+   ============================================ */
+.footer {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    padding: var(--espaciado-xl) 0 var(--espaciado-md);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr; /* Más espacio para "Sobre Nosotros" */
+    gap: 4rem; /* Más separación entre columnas */
+    margin-bottom: var(--espaciado-lg);
+    align-items: start;
+}
+
+.footer-section h3 {
+    color: var(--color-naranja);
+    margin-bottom: var(--espaciado-md);
+    font-size: 1.25rem;
+}
+
+.footer-section p {
+    color: var(--color-gris-claro);
+    line-height: 1.8;
+    text-align: justify; /* Texto justificado en "Sobre Nosotros" */
+}
+
+/* Primera columna: Sobre Nosotros */
+.footer-section:first-child p {
+    text-align: justify;
+}
+
+/* Segunda columna: Contacto - alineado a la izquierda */
+.footer-section:nth-child(2) p {
+    text-align: left;
+}
+
+/* Tercera columna: Call to Action - centrada */
+.footer-section:nth-child(3) {
+    text-align: center;
+}
+
+.footer-section:nth-child(3) h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--color-blanco);
+    background-color: var(--color-naranja);
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transicion);
+    display: inline-block;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    background-color: var(--color-mostaza);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: var(--espaciado-lg);
+    border-top: 1px solid var(--color-gris);
+    color: var(--color-gris);
+}
+
+/* Media queries para footer */
+@media (max-width: 968px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .footer-section:nth-child(3) {
+        grid-column: 1 / -1; /* Ocupa las dos columnas */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-section p {
+        text-align: center !important;
+    }
+    
+    .footer-section:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
+/* ============================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25D366;
+    color: var(--color-blanco);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+    transform: scale(1.1);
+}
+
+.whatsapp-icon {
+    width: 38px;
+    height: 38px;
+    filter: brightness(0) invert(1); /* Hace el SVG blanco */
+}
+
+.whatsapp-text {
+    display: none;
+}
+
+/* Animación de pulso suave */
+@keyframes pulse-soft {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.8);
+    }
+}
+
+.whatsapp-float {
+    animation: pulse-soft 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .whatsapp-icon {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets (768px y menor) */
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        top: 0;
+        border-radius: 0;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--color-blanco);
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: left 0.3s ease;
+        gap: 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--color-gris-claro);
+    }
+    
+    .carousel {
+        height: 400px;
+    }
+    
+    .carousel-control {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .carousel-control.prev {
+        left: 0.5rem;
+    }
+    
+    .carousel-control.next {
+        right: 0.5rem;
+    }
+    
+    .whatsapp-text {
+        display: none;
+    }
+    
+    .whatsapp-float {
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    
+    .clients-track {
+        gap: 2rem;
+    }
+    
+    .client-logo {
+        height: 60px;
+    }
+    
+    .page-hero {
+        height: 300px;
+        margin-top: 5rem;
+    }
+}
+
+/* Móviles (480px y menor) */
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .carousel-section {
+        margin-top: 5rem;
+    }
+    
+    .carousel {
+        height: 300px;
+    }
+    
+    .company-name {
+        font-size: 1.2rem;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+    
+    .slogan-section,
+    .video-section,
+    .clients-section {
+        padding: var(--espaciado-lg) 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .page-hero {
+        height: 250px;
+    }
+}
+
+/* Pantallas grandes (1200px y mayor) */
+@media (min-width: 1200px) {
+    .carousel {
+        height: 700px;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+}
