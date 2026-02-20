@@ -109,11 +109,11 @@ a:focus {
     right: 0;
     z-index: 1000;
     width: 100%;
-    padding: 0.5rem 2.5%; /* Reducido de 1rem a 0.5rem */
+    padding: 0.5rem 2.5%; 
 }
 
 .navbar {
-    padding: 0.5rem 0; /* Reducido de 1rem a 0.5rem */
+    padding: 0.5rem 0; 
 }
 
 .navbar-container {
@@ -128,18 +128,18 @@ a:focus {
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 0.75rem; /* Reducido de 1rem a 0.75rem */
+    gap: 0.75rem; 
 }
 
 .logo-img {
-    height: 30px; /* Reducido de 50px a 40px */
+    height: 30px; 
     width: auto;
     object-fit: contain;
 }
 
 .company-name {
     font-family: var(--fuente-titulos);
-    font-size: 1.25rem; /* Reducido de 1.5rem a 1.25rem */
+    font-size: 1.25rem; 
     font-weight: 700;
     color: var(--color-negro);
 }
@@ -148,18 +148,18 @@ a:focus {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 1.5rem; /* Reducido de 2rem a 1.5rem */
+    gap: 1.5rem; 
     align-items: center;
 }
 
 .nav-link {
     color: var(--color-negro);
     font-weight: 500;
-    padding: 0.4rem 0.8rem; /* Reducido de 0.5rem 1rem */
+    padding: 0.4rem 0.8rem; 
     border-radius: 5px;
     transition: var(--transicion);
     position: relative;
-    font-size: 0.95rem; /* Añadido para texto más pequeño */
+    font-size: 0.95rem; 
 }
 
 .nav-link::after {
@@ -190,7 +190,7 @@ a:focus {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.25rem; /* Reducido de 0.5rem */
+    padding: 0.25rem; 
 }
 
 .hamburger {
@@ -213,7 +213,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem; /* Reducido de 6rem porque el header es más delgado */
+    margin-top: 4rem; 
 }
 
 .hero-overlay {
@@ -248,7 +248,7 @@ a:focus {
    CARRUSEL DE IMÁGENES
    ============================================ */
 .carousel-section {
-    margin-top: 5rem; /* Reducido de 8rem */
+    margin-top: 5rem; 
     padding: 0;
 }
 
@@ -398,7 +398,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 1rem; /* Agregar padding lateral */
+    padding: 0 1rem; 
 }
 
 .clients-track {
@@ -407,16 +407,16 @@ a:focus {
     align-items: center;
     gap: 4rem;
     width: 100%;
-    max-width: 800px; /* Limitar ancho máximo */
-    flex-wrap: wrap; /* Permitir que se envuelvan si es necesario */
+    max-width: 800px; 
+    flex-wrap: wrap; 
 }
 
 .client-logo {
     height: 100px;
     width: auto;
-    max-width: 280px; /* Limitar ancho máximo del logo */
+    max-width: 280px; 
     object-fit: contain;
-    flex-shrink: 1; /* Permitir que se reduzcan */
+    flex-shrink: 1; 
     transition: transform 0.4s ease;
 }
 
@@ -453,7 +453,7 @@ a:focus {
 @media (max-width: 576px) {
     .clients-track {
         gap: 2rem;
-        flex-direction: column; /* Apilar verticalmente */
+        flex-direction: column; 
     }
     
     .client-logo {
@@ -462,7 +462,7 @@ a:focus {
     }
     
     .client-logo:hover {
-        transform: scale(1.05); /* Menos zoom en móvil */
+        transform: scale(1.05); 
     }
 }
 
@@ -493,8 +493,8 @@ a:focus {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr; /* Más espacio para "Sobre Nosotros" */
-    gap: 4rem; /* Más separación entre columnas */
+    grid-template-columns: 1.2fr 1fr 1fr; 
+    gap: 4rem; 
     margin-bottom: var(--espaciado-lg);
     align-items: start;
 }
@@ -508,7 +508,7 @@ a:focus {
 .footer-section p {
     color: var(--color-gris-claro);
     line-height: 1.8;
-    text-align: justify; /* Texto justificado en "Sobre Nosotros" */
+    text-align: justify; 
 }
 
 /* Primera columna: Sobre Nosotros */
@@ -572,7 +572,7 @@ a:focus {
     }
     
     .footer-section:nth-child(3) {
-        grid-column: 1 / -1; /* Ocupa las dos columnas */
+        grid-column: 1 / -1; 
     }
 }
 
@@ -623,7 +623,7 @@ a:focus {
 .whatsapp-icon {
     width: 38px;
     height: 38px;
-    filter: brightness(0) invert(1); /* Hace el SVG blanco */
+    filter: brightness(0) invert(1); 
 }
 
 .whatsapp-text {

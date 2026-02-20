@@ -27,6 +27,8 @@
     <link rel="shortcut icon" href="assets/favicons/favicon.ico">
     <meta name="theme-color" content="#ffffff">
     
+    <link rel="preload" as="image" href="assets/imagenes/hero/muro.jpg">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/proyectos.css">
@@ -178,24 +180,6 @@
             </div>
         </section>
 
-        <!-- Modal de detalle de proyecto -->
-        <div id="projectModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" style="display: none;">
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Cerrar ventana de detalles">&times;</button>
-                <div class="modal-body">
-                    <h2 id="modalTitle" class="modal-project-title">Nombre del Proyecto</h2>
-                    <img src="" alt="" class="modal-project-image" id="modalImage">
-                    <div class="modal-project-details">
-                        <h3>Detalles del Proyecto</h3>
-                        <ul class="project-details-list" id="modalDetails">
-                            <!-- Se llenará dinámicamente con JavaScript -->
-                        </ul>
-                        <p class="project-description" id="modalDescription"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
             <!-- Sección de clientes (logos) -->
         <section class="clients-section" aria-label="Nuestros clientes">
             <div class="container">
@@ -215,7 +199,7 @@
         <div class="container footer-content">
             <div class="footer-section">
                 <h3>Sobre Nosotros</h3>
-                <p>Somos una empresa líder en construcción e ingeniería con más de 15 años de experiencia, comprometidos con la excelencia y calidad en cada proyecto.</p>
+                <p>Somos una empresa de construcción e ingeniería con más de 15 años de experiencia, comprometidos con la excelencia y calidad en cada proyecto.</p>
             </div>
             
             <div class="footer-section">
@@ -245,7 +229,6 @@
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp">
             <img src="assets/logos/whatsApp.svg.webp" alt="WhatsApp" class="whatsapp-icon">
-            <span class="whatsapp-text">¿Necesitas ayuda?</span>
     </a>
 
     <script src="js/main.js"></script>

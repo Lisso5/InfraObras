@@ -10,19 +10,19 @@
 
 .contact-info-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas lado a lado */
-    gap: 4rem; /* Más separación horizontal */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 4rem; 
     margin-top: var(--espaciado-lg);
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Tarjeta de información - SIN fondo, más minimalista */
+/* Tarjeta de información */
 .info-card {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem; /* Espacio entre dirección/horario o email/teléfono */
+    gap: 2.5rem; 
 }
 
 /* Grupo de información (icono + contenido) */
@@ -37,7 +37,6 @@
     flex-shrink: 0;
     width: 70px;
     height: 70px;
-  /*  background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza)); */
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -55,7 +54,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-  /*  filter: brightness(0) invert(1); /* Hace la imagen blanca */
 }
 
 /* Divisor entre secciones - MÁS SUTIL */
@@ -100,29 +98,6 @@
     background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza));
     width: 100%;
 }
-/*
-.slogan-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 2rem;
-}
-
-.slogan-title {
-    color: var(--color-negro);
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.slogan-text {
-    color: var(--color-blanco);
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 300;
-    line-height: 1.6;
-    margin: 0;
-    opacity: 0.95;
-} */
 
 /* ============================================
    MAPA
@@ -161,7 +136,7 @@
 /* Tablets (768px y menor) - Cambiar a 1 columna */
 @media (max-width: 768px) {
     .contact-info-grid {
-        grid-template-columns: 1fr; /* 1 columna en tablets */
+        grid-template-columns: 1fr; 
         max-width: 600px;
     }
     

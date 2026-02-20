@@ -40,7 +40,7 @@
 }
 
 .pillar-card--wide {
-    grid-column: 1 / -1; /* ocupa las dos columnas */
+    grid-column: 1 / -1; 
 }
 
 /* Tarjetas de pilares */
@@ -59,23 +59,6 @@
     box-shadow: 0 15px 35px rgba(255, 140, 0, 0.15);
 }
 
-/* Icono de pilar */
-/*.pillar-icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--color-naranja), var(--color-mostaza));
-    border-radius: 50%;
-    color: var(--color-blanco);
-    transition: var(--transicion);
-}
-
-.pillar-card:hover .pillar-icon {
-    transform: scale(1.1);
-} */
 
 /* Título del pilar */
 .pillar-title {
