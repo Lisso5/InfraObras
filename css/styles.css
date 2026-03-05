@@ -109,11 +109,13 @@ a:focus {
     right: 0;
     z-index: 1000;
     width: 100%;
-    padding: 0.5rem 2.5%; 
+    padding: 0.5rem 2.5%;
+    height: 70px; /* ← ALTURA FIJA DEL HEADER */
 }
 
 .navbar {
-    padding: 0.5rem 0; 
+    padding: 0;
+    height: 100%;
 }
 
 .navbar-container {
@@ -122,26 +124,22 @@ a:focus {
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
+    height: 100%; /* Ocupa toda la altura del header */
 }
 
-/* Logo y nombre de empresa */
+/* Logo */
 .logo-section {
     display: flex;
     align-items: center;
-    gap: 0.75rem; 
+    height: 100%; /* Ocupa toda la altura disponible */
+    padding: 0.2rem 0; /* Espaciado interno */
 }
 
 .logo-img {
-    height: 30px; 
+    height: 100%; /* Se adapta a la altura del contenedor */
     width: auto;
+    max-height: 100px; /* ← AJUSTA ESTE VALOR para hacer el logo más grande */
     object-fit: contain;
-}
-
-.company-name {
-    font-family: var(--fuente-titulos);
-    font-size: 1.25rem; 
-    font-weight: 700;
-    color: var(--color-negro);
 }
 
 /* Menú de navegación */
@@ -150,6 +148,8 @@ a:focus {
     list-style: none;
     gap: 1.5rem; 
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
